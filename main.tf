@@ -28,3 +28,13 @@ resource "github_repository_collaborator" "repo_collaborator" {
   permission = "admin"
 }
 
+resource "github_repository" "java_sandbox" {
+  name       = "java_sandbox"  
+  visibility = var.repo_visibility  
+}
+
+resource "github_repository_collaborator" "java_sandbox_collaborator" {
+  repository = github_repository.java_sandbox.name
+  username   = "RVleerobertdyer"
+  permission = "admin"
+}
