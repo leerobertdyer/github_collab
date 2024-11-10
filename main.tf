@@ -38,3 +38,14 @@ resource "github_repository_collaborator" "java_sandbox_collaborator" {
   username   = "RVleerobertdyer"
   permission = "admin"
 }
+
+resource "github_repository" "erin_dawn" {
+  name       = "erin_dawn"  
+  visibility = "public"  
+}
+
+resource "github_repository_collaborator" "erin_dawn_collaborator" {
+  repository = github_repository.erin_dawn.name
+  username   = "RVleerobertdyer"
+  permission = "admin"
+}
